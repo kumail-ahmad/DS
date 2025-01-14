@@ -17,6 +17,7 @@ int main()
     i++;
     i--;
     --i;
+    ++i;
     cout << i;
     return 0;
 }
