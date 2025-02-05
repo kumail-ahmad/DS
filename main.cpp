@@ -15,6 +15,7 @@ int main()
     // cout << "the name of use is: " << n1 + n2;
     int i = 1;
     i++;
+    i--;
     cout << i;
     return 0;
 }
