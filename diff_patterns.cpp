@@ -4,7 +4,7 @@ int main()
 //paterns in cpp
 {
     int numinc = 1;
-    int n = 6;
+    int n = 7;
     for (int i = 1; i <= n; i++)
     {
         for (int j = 0; j < n; j++)
