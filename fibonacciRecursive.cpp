@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+// recursive fibonacci function
 int fibno(int n)
 {
     if (n == 0 || n == 1)
@@ -13,5 +14,4 @@ int main()
     int n = 5;
     cout << fibno(n);
     return 0;
-
 };
