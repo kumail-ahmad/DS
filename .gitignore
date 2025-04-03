@@ -1,0 +1,38 @@
+# Ignore executable files
+*.exe
+
+# Ignore compiled files (C/C++/Java)
+*.o
+*.out
+*.class
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+
+# Ignore Java bytecode and logs
+*.log
+*.jar
+*.war
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore MacOS system files
+.DS_Store
+
+# Ignore Node.js dependencies (if using JavaScript)
+node_modules/
+
+# Ignore Java gradle/maven build files
+target/
+build/
+
+# Ignore IDE-specific files
+.idea/
+*.iml
+
+# Ignore temporary files
+*.tmp
+*.swp
+*.swo
