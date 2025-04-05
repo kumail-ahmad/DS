@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std;
 int main()
@@ -15,4 +16,5 @@ int main()
         smallest = min(arr[i], smallest);
     };
     cout << smallest << endl;
+
 };

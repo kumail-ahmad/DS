@@ -16,4 +16,5 @@ int binToDec(int binNum)
 int main()
 {
     cout << binToDec(101) << endl;
+
 }
