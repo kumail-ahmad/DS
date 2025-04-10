@@ -9,4 +9,5 @@ int main()
     }
     cout << base << "^" << pow << "=" << result << endl;
     return 0;
+
 }
