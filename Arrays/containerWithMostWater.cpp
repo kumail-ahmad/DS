@@ -16,7 +16,7 @@ int main()
             maxWater = max(maxWater, area);
         }
     }
-    cout << "the maximum water that can be contained is : " << maxWater << endl;
+    cout << "the maximum water that can be contained is  : " << maxWater << endl;
 
     return 0;
 }
