@@ -11,9 +11,11 @@ int main()
     // subtarction
     cout << ptr2 - ptr1 << endl;
 
-    // comparison
+    // comparison of pointers
+    cout << (ptr1 == ptr2) << endl;
     cout << (ptr1 == ptr3) << endl;
     cout << (ptr1 < ptr3) << endl;
     cout << (ptr1 > ptr3) << endl;
+    cout << (ptr1 <= ptr3) << endl;
     return 0;
 }
