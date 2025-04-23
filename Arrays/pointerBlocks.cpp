@@ -17,5 +17,8 @@ int main()
     cout << (ptr1 < ptr3) << endl;
     cout << (ptr1 > ptr3) << endl;
     cout << (ptr1 <= ptr3) << endl;
+    cout << (ptr1 >= ptr3) << endl;
+    cout << (ptr1 != ptr3) << endl;
+
     return 0;
 }
