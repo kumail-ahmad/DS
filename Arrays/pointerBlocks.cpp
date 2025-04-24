@@ -6,6 +6,7 @@ int main()
     int a = 10;
     int *ptr1;
     int *ptr3 = ptr1;
+    
 
     int *ptr2 = ptr1 + 2;
     // subtarction
