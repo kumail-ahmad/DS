@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 int main()
+//paterns in cpp
 {
     int numinc = 1;
     int n = 3;
