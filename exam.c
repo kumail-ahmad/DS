@@ -6,6 +6,7 @@ int main()
     if (a > 8)
     {
         printf("Good");
+        printf("working");
     }
     return 0;
 }
