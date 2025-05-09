@@ -7,6 +7,7 @@ int main()
     {
         printf("Good");
         printf("working");
+        printf("alright");
     }
     return 0;
 }
