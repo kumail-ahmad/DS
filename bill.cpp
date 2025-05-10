@@ -1,3 +1,4 @@
+// Electricity bill calci
 #include <iostream>
 using namespace std;
 
