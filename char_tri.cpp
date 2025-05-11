@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 int main()
+//character triangle
+// This program prints a triangle of characters.
 {
     char charac = 'A';
     int n = 102;
