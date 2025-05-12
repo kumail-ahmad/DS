@@ -16,10 +16,26 @@ int main()
         };
         if (arr[start] <= arr[mid])
         { // left
+            if (arr[start] <= target && target <= arr[mid])
+            {
+                end = mid - 1;
+            }
+            else
+            {
+                start = mid + 1;
+            }
         }
         else
         { // right
+            if (arr[mid] <= target && target <= arr[end])
+            {
+                start = mid + 1;
+            }
+            else
+            {
+                end = mid - 1;
+            }
         }
     }
-    return 0;
+    return -1; // target was not found
 }
