@@ -2,6 +2,7 @@
 using namespace std;
 int main()
 {
+    //signed and unsigned int in C
     unsigned int a = -12;
     // cout << sizeof(int) << endl;
     // cout << sizeof(long int) << endl;
