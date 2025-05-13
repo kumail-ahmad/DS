@@ -38,5 +38,5 @@ int main()
         }
         cout << "Target at index :" << mid << endl;
     }
-    return -1; // target was not found
+    return -1; // target was not found 
 }
