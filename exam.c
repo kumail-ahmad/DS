@@ -1,12 +1,13 @@
-#include<stdio.h>
-int main() {
-int x;
-float y;
-y = 15/2;
-printf("%f"
-, y);
-y = (float)15/2 + (15/2);
-printf("%f\n"
-, y);
-return 0;
+#include <stdio.h>
+int main()
+{
+    int m = 10;
+    int n, n1;
+    n = ++m;
+    n1 = m++;
+    n--;
+    --n1;
+    n -= n1;
+    printf("%d", n);
+    return 0;
 }
