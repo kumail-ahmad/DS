@@ -1,8 +1,12 @@
-#include <stdio.h>
-int main()
-{
-
-    printf("%-5d", 42);
-    printf("%-5d", 42);
-    return 0;
+#include<stdio.h>
+int main() {
+int x;
+float y;
+y = 15/2;
+printf("%f"
+, y);
+y = (float)15/2 + (15/2);
+printf("%f\n"
+, y);
+return 0;
 }
