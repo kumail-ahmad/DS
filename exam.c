@@ -1,13 +1,14 @@
 #include <stdio.h>
 int main()
 {
-    int m = 10;
-    int n, n1;
-    n = ++m;
-    n1 = m++;
-    n--;
-    --n1;
-    n -= n1;
-    printf("%d", n);
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 5; j > i; j--)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+
     return 0;
 }
