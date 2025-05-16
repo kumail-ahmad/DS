@@ -1,14 +1,8 @@
 #include <stdio.h>
 int main()
 {
-    for (int i = 0; i < 5; i++)
-    {
-        for (int j = 5; j > i; j--)
-        {
-            printf("*");
-        }
-        printf("\n");
-    }
-
+    int x = 3, y = 3, z = 1;
+    z += x < y ? x++ : y++;
+    printf("%d\t%d\t%d\n", x, y, z);
     return 0;
 }
