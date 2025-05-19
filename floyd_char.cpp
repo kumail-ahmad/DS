@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+// Floyd's triangle with characters
 int main()
 {
     int num = 1;
@@ -9,7 +10,7 @@ int main()
         for (int j = 0; j < i - 95; j++)
         {
             cout << chr;
-            chr++; 
+            chr++;
         }
         cout << endl;
     }
