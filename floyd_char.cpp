@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 // Floyd's triangle with characters
+// Floyd's triangle is a right-angled triangular array of natural numbers
+// that is used in number theory and combinatorial mathematics.
 int main()
 {
     int num = 1;
