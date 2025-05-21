@@ -15,11 +15,11 @@ int main()
             return mid;
         }
 
-        if (arr[mid - 1] < arr[mid])
+       else if (arr[mid - 1] < arr[mid]) // right
         {
             start = mid + 1;
         }
-        else
+        else //left
         {
             end = mid - 1;
         }
