@@ -24,6 +24,6 @@ int main()
             end = mid - 1;
         }
     }
-    cout << "Target Found at index : " << mid << endl;
+    cout << "Target Found at index : " << mid + 1 << endl;
     return 0;
 }
