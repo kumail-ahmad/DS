@@ -4,17 +4,26 @@ using namespace std;
 int main()
 {
     vector<int> arr = {0, 3, 8, 9, 5, 2};
-    int start = 0;
+    int start = 1;
     int target = 9;
-    int end = arr.size() - 1;
+    int end = arr.size() - 2;
+    int mid = start + (end - start) / 2;
     while (arr[start] <= arr[end])
     {
-        int mid = start + (end - start) / 2;
-        if (arr[mid] == target)
+        if (arr[mid - 1] < arr[mid] && arr[mid] > arr[mid + 1])
         {
-            /* code */
+            return mid;
+        }
+
+        if (arr[mid - 1] < arr[mid])
+        {
+            start = mid + 1;
+        }
+        else
+        {
+            end = mid - 1;
         }
     }
-
+    cout << "Target Found at index : " << mid << endl;
     return 0;
 }
