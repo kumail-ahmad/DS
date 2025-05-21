@@ -8,7 +8,7 @@ int main()
     int target = 9;
     int end = arr.size() - 2;
     int mid = start + (end - start) / 2;
-    while (arr[start] <= arr[end])
+    while (start <= end)
     {
         if (arr[mid - 1] < arr[mid] && arr[mid] > arr[mid + 1])
         {
