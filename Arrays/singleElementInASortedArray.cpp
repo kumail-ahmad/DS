@@ -15,7 +15,11 @@ int main()
                 return mid;
             }
             else if (mid % 2 != 0)
-            {
+            {if(arr[mid-1]=arr[mid]){
+                end=mid-1;
+            }else{
+                start=mid+1;
+            }
             }
         }
         else
