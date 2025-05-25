@@ -6,7 +6,7 @@ int main()
     vector<int> arr = {1, 1, 2, 3, 3, 4, 4, 8, 8};
     int start = 0, end = arr.size();
     int mid = start + (end - start) / 2;
-    for (int i = 0; i < end; i++)
+    while (start <= end)
     {
         if (mid % 2 == 0)
         { // even case
@@ -14,16 +14,13 @@ int main()
             {
                 return mid;
             }
-            else if (mid % 2 != 0)
+            else if (arr[mid - 1] == arr[mid])
             {
-                if (arr[mid - 1] = arr[mid])
-                {
-                    end = mid - 1;
-                }
-                else
-                {
-                    start = mid + 1;
-                }
+                end = mid - 1;
+            }
+            else
+            {
+                start = mid + 1;
             }
         }
         else
@@ -39,5 +36,6 @@ int main()
             }
         }
     }
-    return 0;
+    cout << "element found index:" << mid << endl;
+    return -1;
 }
