@@ -10,7 +10,6 @@ int main()
     while (start <= end)
     {
         mid = start + (end - start) / 2;
-
         // edge case
         if (mid == 0 && arr[0] != arr[1])
 
