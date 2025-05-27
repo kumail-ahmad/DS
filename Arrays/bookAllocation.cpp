@@ -4,9 +4,9 @@ using namespace std;
 
 bool isValid(vector<int> &arr, int n, int m, int maxAllowedPages)
 {
-    int student = 1, pages = 0;
+    int students = 1, pages = 0;
 
-    for (int i = 01; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
         if (pages + arr[i] <= maxAllowedPages)
         {
@@ -14,10 +14,11 @@ bool isValid(vector<int> &arr, int n, int m, int maxAllowedPages)
         }
         else
         {
-            student++;
+            students++;
             pages = arr[i];
         }
     }
+    return students > m ? false : true; // if students are more than m, then return false
 }
 
 int allocateBooks(vector<int> &arr, int n, int m)
@@ -28,14 +29,14 @@ int allocateBooks(vector<int> &arr, int n, int m)
     }
 
     int sum = 0;
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++) // O(n)
     {
         sum += arr[i];
     }
     int start = 0;
-    int end = sum, ans = -1;
+    int end = sum, ans = -1; // range of pages
 
-    while (start <= end)
+    while (start <= end) // O(logN*n)
     {
         int mid = start + (end - start) / 2;
 
