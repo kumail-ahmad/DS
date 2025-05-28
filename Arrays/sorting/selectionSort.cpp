@@ -15,12 +15,18 @@ void SelectionSort(int arr[], int n)
         swap(arr[i], arr[smallestIndex]);
     }
 }
-
+void PrintArray(int arr[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+}
 int main()
 {
     int arr[] = {5, 1, 4, 2, 8};
     int n = sizeof(arr) / sizeof(arr[0]);
     SelectionSort(arr, n);
-    
+    PrintArray(arr, n);
     return 0;
 }
