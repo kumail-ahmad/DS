@@ -17,11 +17,19 @@ void insertionSort(int arr[], int n) // O(n^2) time complexity, O(1) space compl
     }
 }
 
+void printArray(int arr[], int n)
+{
+    for (int j = 0; j < n; j++)
+    {
+        cout << arr[j] << " ";
+    }
+    cout << endl;
+}
 int main()
 {
     int arr[] = {4, 1, 5, 2, 3};
     int n = sizeof(arr) / sizeof(arr[0]);
     insertionSort(arr, n);
-
+    printArray(arr, n);
     return 0;
 }
