@@ -16,7 +16,19 @@ int main()
         else if (arr[i] == 2)
             two++;
     }
- 
+    // printing the sorted array
+    for (int i = 0; i < zero; i++)
+    {
+        cout << 0 << " ";
+    }
+    for (int i = 0; i < one; i++)
+    {
+        cout << 1 << " ";
+    }
+    for (int i = 0; i < two; i++)
+    {
+        cout << 2 << " ";
+    }
 
     return 0;
 }
