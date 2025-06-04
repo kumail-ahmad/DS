@@ -30,5 +30,10 @@ int main()
         j--;
         index--;
     }
+    for (int i = 0; i <= m; i++)
+    {
+        cout << A[i] << " ";
+    }
+
     return 0;
 }
