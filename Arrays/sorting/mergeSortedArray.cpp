@@ -24,5 +24,11 @@ int main()
             index--;
         }
     }
+    while (j >= 0)
+    {
+        A[index] = B[j];
+        j--;
+        index--;
+    }
     return 0;
 }
