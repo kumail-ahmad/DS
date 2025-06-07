@@ -1,6 +1,9 @@
 #include <iostream>
+#include <vector>
 using namespace std;
-int main() {
-  
-return 0;
+int main()
+{
+    vector<int> arr = {1, 2, 3};
+    
+    return 0;
 }
