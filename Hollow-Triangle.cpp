@@ -9,13 +9,13 @@ int main()
         {
             if (j == 1 || j == i || i == 5)
 
-                printf("*");
+                cout << "*";
 
             else
 
-                printf(" ");
+                cout << " ";
         }
-        printf("\n");
+        cout << "\n";
     }
 
     return 0;

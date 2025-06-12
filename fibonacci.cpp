@@ -10,7 +10,7 @@ int main()
     {
         cout << first << " ";
         first = second;
-        second = next;
         next = first + second;
+        second = next;
     }
 }

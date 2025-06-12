@@ -2,8 +2,20 @@
 #include <vector>
 using namespace std;
 int main()
-{//bruteforce
+{
     vector<int> arr = {1, 2, 3};
+    int n = arr.size();
 
+    // find the pivot
+
+    int pivot = -1;
+    for (int i = n - 2; i >= 0; i--)
+    {
+        if (arr[i] < arr[i + 1])
+        {
+            pivot = i;
+            break;
+        }
+    }
     return 0;
 }
