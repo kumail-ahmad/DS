@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 int main()
 {
@@ -16,6 +17,18 @@ int main()
             pivot = i;
             break;
         }
+        if (pivot == -1)
+        {
+            // if pivot is not found, it means the array is in descending order
+            // so we reverse the array to get the smallest permutation
+            reverse(arr.begin(), arr.end());
+            for (int i = 0; i < n; i++)
+            {
+                cout << arr[i] << " ";
+            }
+            return 0;
+        }
+        
     }
     for (int i = n - 1; i > pivot; i--)
     {
