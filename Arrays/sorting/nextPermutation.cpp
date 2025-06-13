@@ -17,5 +17,13 @@ int main()
             break;
         }
     }
+    for (int i = n - 1; i > pivot; i--)
+    {
+        if (arr[i] > arr[pivot])
+        {
+            swap(arr[i], arr[pivot]);
+            break;
+        }
+    }
     return 0;
 }
