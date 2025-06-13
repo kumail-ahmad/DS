@@ -3,7 +3,7 @@
 using namespace std;
 int main()
 {
-    vector<int> arr = {1, 2, 3};
+    vector<int> arr = {1, 2, 5, 4, 3};
     int n = arr.size();
 
     // find the pivot
@@ -25,5 +25,19 @@ int main()
             break;
         }
     }
-    return 0;
+    int i = pivot + 1;
+    int j = n - 1;
+    while (i <= j)
+    {
+        swap(arr[i], arr[j]);
+        i++;
+        j--;
+    }
+    // print the next permutation
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+
+    return -1;
 }
