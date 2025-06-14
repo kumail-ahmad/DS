@@ -4,9 +4,23 @@ using namespace std;
 int main()
 {
     // vector
-    vector<int> vec = {1, 3, 5, 6, 7, 8, 9, 10};
+    vector<int> vec;
 
     vec.push_back(11);
-    cout << vec.size() << endl;
+    vec.push_back(65);
+    vec.push_back(12);
+    vec.push_back(7);
+
+    // cout << vec.size() << endl;
+    // cout << vec.capacity() << endl;
+    vec.pop_back();
+
+    for (int i : vec)
+    {
+        cout << i << " ";
+    }
+
+    cout << endl;
+    cout << "value at index 2 " << vec[2] << " or " << vec.at(2) << endl;
     return 0;
 }
