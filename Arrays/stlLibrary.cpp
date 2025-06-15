@@ -5,7 +5,9 @@ int main()
 {
     // vector
     vector<int> vec;
+    vector<int> dynamic(10, -1);
 
+    
     vec.push_back(11);
     vec.push_back(65);
     vec.push_back(12);
@@ -15,7 +17,7 @@ int main()
     // cout << vec.capacity() << endl;
     vec.pop_back();
     vec.emplace_back();
-    for (int i : vec)
+    for (int i : dynamic)
     {
         cout << i << " ";
     }
