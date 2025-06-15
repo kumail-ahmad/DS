@@ -7,7 +7,7 @@ int main()
     vector<int> vec;
     vector<int> dynamic(10, -1);
 
-    
+    vector<int>dynoCopy(dynamic);
     vec.push_back(11);
     vec.push_back(65);
     vec.push_back(12);
@@ -17,7 +17,7 @@ int main()
     // cout << vec.capacity() << endl;
     vec.pop_back();
     vec.emplace_back();
-    for (int i : dynamic)
+    for (int i : dynoCopy)
     {
         cout << i << " ";
     }
