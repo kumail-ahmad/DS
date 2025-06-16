@@ -7,7 +7,7 @@ int main()
     vector<int> vec;
     vector<int> dynamic(10, -1);
 
-    vector<int>dynoCopy(dynamic);
+    vector<int> dynoCopy(dynamic);
     vec.push_back(11);
     vec.push_back(65);
     vec.push_back(12);
@@ -17,15 +17,21 @@ int main()
     // cout << vec.capacity() << endl;
     vec.pop_back();
     vec.emplace_back();
-    for (int i : dynoCopy)
-    {
-        cout << i << " ";
-    }
 
     cout << endl;
     // cout << "value at index 2 " << vec[2] << " or " << vec.at(2) << endl;
 
     cout << vec.front() << endl; // first element
     cout << vec.back() << endl;  // last element
+
+    // erase function
+    vec.erase(vec.begin() + 2);
+
+    // print the vector
+    for (int i : dynoCopy)
+    {
+        cout << i << " ";
+    }
+
     return 0;
 }
