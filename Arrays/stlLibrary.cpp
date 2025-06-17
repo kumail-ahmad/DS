@@ -27,6 +27,9 @@ int main()
     // erase function
     vec.erase(vec.begin() + 1, vec.begin() + 3);
 
+    // insert function
+    vec.insert(vec.begin() + 1, 250);
+
     // print the vector
     for (int i : vec)
     {
