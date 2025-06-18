@@ -30,6 +30,10 @@ int main()
     // insert function
     vec.insert(vec.begin() + 1, 250);
 
+    //clear all elements
+    vec.clear();
+
+    
     // print the vector
     for (int i : vec)
     {
