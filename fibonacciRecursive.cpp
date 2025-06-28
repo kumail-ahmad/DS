@@ -7,7 +7,7 @@ int fibno(int n)
     {
         return n;
     }
-    return (n - 1) + (n - 2);
+    return (n - 1) + fibno(n - 2);
 }
 int main()
 {
