@@ -6,6 +6,9 @@ int main()
     string str2 = "Ahmad";
 
     string str3 = str1 + str2;
-    cout << " concatenated string:" << str3 << endl;
+    // concatenation
+    cout << " concatenated string: " << str3 << endl;
+    // compare
+    cout << (str1 == str2) << endl;
     return 0;
 }
