@@ -2,15 +2,19 @@
 using namespace std;
 int main()
 {
-    char str[100];
-    cout << "enter a string:" << endl;
-    cin.getline(str, 100);
+    char str[] = {"kumail Ahmad"};
+    // cout << "enter a string:" << endl;
+    // cin.getline(str, 100);
+
     // cout << "your output is : " << str;
 
-    for (char ch : str)
+    int length = 0;
+
+    for (int i = 0; str[i] != '\0'; i++)
     {
-        cout << ch << " ";
+        length++;
     }
+    cout << "The length of the string is: " << length << endl;
 
     return 0;
 }
