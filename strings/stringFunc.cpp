@@ -9,6 +9,8 @@ int main()
     // concatenation
     cout << " concatenated string: " << str3 << endl;
     // compare
-    cout << (str1 == str2) << endl;
+    cout << "are the string same: " << (str1 == str2) << endl;
+    // length
+    cout << " The length of the string is: " << str1.length() << endl;
     return 0;
 }
