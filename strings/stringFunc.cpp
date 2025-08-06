@@ -17,7 +17,8 @@ int main()
 
     // input a string
     cout << "Enter a string: ";
-    cin >> str4; // stored only one word
+    // cin >> str4; // stored only one word
+    getline(cin, str4); // to store a full line including spaces
     cout << "The string you entered is: " << str4 << endl;
     return 0;
 }
