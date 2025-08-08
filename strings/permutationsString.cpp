@@ -28,7 +28,7 @@ bool checkInclusions(string s1, string s2)
 
     for (int i = 0; i < s2.size(); i++)
     {
-        int windIdx = 0, idx = i;g
+        int windIdx = 0, idx = i;
         int windFreq[26] = {0};
 
         while (windIdx < windSize && idx < s2.size())
