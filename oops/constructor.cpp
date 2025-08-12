@@ -17,13 +17,20 @@ public:
     string name;
     string department;
     int roll_no;
+
+    void getInfo()
+    {
+        cout << "Name :" << name << endl;
+        cout << "department :" << department << endl;
+        cout << "Roll no :" << roll_no << endl;
+    }
 };
 
 int main()
 {
-    info student1={"john doe","CSE",24115};
-    
-    cout << student1.name << endl;
+    info student1 = {"john doe", "CSE", 24115};
+
+    student1.getInfo();
 
     return 0;
 }
