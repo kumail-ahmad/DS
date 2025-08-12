@@ -6,19 +6,23 @@ class info
 {
 
 public:
-// non parametirised constructor
-    info()
+    //  parametirised constructor
+    info(string n, string dep, int roll)
     {
-        name = "Kumail Ahmad ";
+        name = n;
+        department = dep;
+        roll_no = roll;
     }
 
     string name;
+    string department;
+    int roll_no;
 };
 
 int main()
 {
-    info student1;
-    //we didnt initialize a value to name, but got initialized through the constructor
+    info student1={"john doe","CSE",24115};
+    
     cout << student1.name << endl;
 
     return 0;
