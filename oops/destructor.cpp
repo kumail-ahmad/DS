@@ -12,7 +12,7 @@ public:
         cgpaPtr = new double;
         *cgpaPtr = cgpa;
     }
-    // destructot
+    // destructor
     ~student() {
         cout << "hi i am destructor";
         delete cgpaPtr;
