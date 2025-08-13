@@ -6,6 +6,10 @@ class info
 {
 
 public:
+    string name;
+    string department;
+    int roll_no;
+
     info(string name, string department, int roll_no)
     {
         this->name = name;
@@ -13,9 +17,13 @@ public:
         this->roll_no = roll_no;
     }
 
-    string name;
-    string department;
-    int roll_no;
+    info(info &orjInfo)
+    {
+        cout << "i am custom copy constructor" << endl;
+        this->name = orjInfo.name;
+        this->department = orjInfo.department;
+        this->roll_no = orjInfo.roll_no;
+    }
 
     void getInfo()
     {
@@ -29,8 +37,8 @@ int main()
 {
     info student1 = {"john doe", "CSE", 24115};
     info student2(student1);
-    student1.getInfo();
-    cout << "----------------" << endl;
+    // student1.getInfo();
+    // cout << "----------------" << endl;
     student2.getInfo();
     return 0;
 }
