@@ -7,11 +7,11 @@ class info
 
 public:
     //  parametirised constructor
-    info(string n, string dep, int roll)
+    info(string name, string department, int roll_no)
     {
-        name = n;
-        department = dep;
-        roll_no = roll;
+        this->name = name; //  this->name is property of object
+        this->department = department;
+        this->roll_no = roll_no;
     }
 
     string name;
