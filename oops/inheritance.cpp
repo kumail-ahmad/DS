@@ -32,7 +32,7 @@ public:
     {
         cout << " child destructor here" << endl;
     }
-
+ 
     void getInfo()
     {
         cout << "department is : " << department << endl;
