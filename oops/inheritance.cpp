@@ -10,6 +10,11 @@ public:
     {
         this->department = department;
         this->block = block;
+        cout << " I am parent constructor" << endl;
+    }
+    ~university()
+    {
+        cout << " parent destructor here" << endl;
     }
 };
 
@@ -21,6 +26,11 @@ public:
     teachers(string department, int block, int employeeId) : university(department, block) // base constructor
     {
         this->employeeId = employeeId;
+        cout << " I am child constructor" << endl;
+    }
+    ~teachers()
+    {
+        cout << " child destructor here" << endl;
     }
 
     void getInfo()
