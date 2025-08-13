@@ -10,13 +10,12 @@ public:
     {
         this->name = name;
         cgpaPtr = new double;
-        *cgpaPtr = cgpa; 
+        *cgpaPtr = cgpa;
     }
-    student(student &obj)
-    {
-        this->name = obj.name;
-        cgpaPtr = new double;
-        *cgpaPtr = *obj.cgpaPtr;
+    // destructot
+    ~student() {
+        cout << "hi i am destructor";
+        delete cgpaPtr;
     };
     void getInfo()
     {
@@ -28,12 +27,8 @@ public:
 int main()
 {
     student s1("Kumail", 9.1);
-    student s2 = s1;
-    s1.getInfo();
 
-    *(s2.cgpaPtr) = 6.3;
-    s1.getInfo(); // deep copy solves this problem
-    s2.getInfo();
+    s1.getInfo();
 
     return 0;
 }
