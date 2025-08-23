@@ -22,20 +22,12 @@ public:
     {
         head = tail = NULL;
     }
-    void push_front(int val)
-    {
-        Node *newNode = new Node(val);//dynamic
-       // Node newNode(val); // static
-       if (head==NULL)
-       {
-        head=tail=newNode;
-        return;
-       }
-       
-    }
+   
 };
 int main()
 {
-List ll;
+    List ll;
+
+ 
     return 0;
 }
