@@ -23,6 +23,7 @@ public:
     {
         head = tail = NULL;
     }
+  
 
     void push_back(int value)
     {
