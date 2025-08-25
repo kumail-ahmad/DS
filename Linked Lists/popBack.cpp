@@ -66,7 +66,26 @@ public:
             delete temp;
         }
     }
-    
+    void popBack()
+    {
+        if (head == NULL)
+        {
+            cout << "List is empty\n";
+            return;
+        }
+        else
+        {
+            Node *temp = head;
+            while (temp->next != tail)
+            {
+                temp = temp->next;
+            }
+            temp->next = NULL;
+            delete tail;
+
+            tail = temp;
+        }
+    }
     void PrintLinkedList()
     {
         Node *temp = head;
@@ -89,7 +108,7 @@ int main()
 
     kum.popFront();
     kum.PrintLinkedList();
-    
+    kum.popBack();
     kum.PrintLinkedList();
     return 0;
 }
