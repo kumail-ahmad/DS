@@ -65,6 +65,26 @@ public:
             delete temp;
         }
     }
+    void popBack()
+    {
+        if (head == NULL)
+        {
+            cout << "List is empty\n";
+            return;
+        }
+        else
+        {
+            Node *temp = head;
+            while (temp->next != tail)
+            {
+                temp = temp->next;
+            }
+            temp->next = NULL;
+            delete tail;
+
+            tail = temp;
+        }
+    }
     void PrintLinkedList()
     {
         Node *temp = head;
@@ -73,7 +93,7 @@ public:
             cout << temp->data << " -> ";
             temp = temp->next;
         }
-        cout << "NULL";
+        cout << "NULL\n";
     }
 };
 
@@ -81,11 +101,13 @@ int main()
 {
     List kum;
     kum.pushFront(3);
-    kum.pushBack(2);
-    kum.pushFront(9);
-    kum.pushBack(5);
+    kum.pushFront(2);
+    kum.pushBack(1);
+    kum.pushBack(4);
 
     kum.popFront();
+    kum.PrintLinkedList();
+    kum.popBack();
     kum.PrintLinkedList();
     return 0;
 }
