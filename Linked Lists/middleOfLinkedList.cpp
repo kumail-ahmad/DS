@@ -43,7 +43,7 @@ public:
             cout << temp->data << " -> ";
             temp = temp->next;
         }
-        cout << "NULL \n";
+        cout << "NULL \n"; 
     }
     // slow fast pointer approach
     int middleofLinkedList()
