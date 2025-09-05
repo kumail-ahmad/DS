@@ -45,19 +45,19 @@ public:
         }
         cout << "NULL \n";
     }
-    //Bruteforce approach 
-    void middleofLinkedList()
+    // slow fast pointer approach
+    int middleofLinkedList()
     {
-        Node *temp = head;
-        int count = 0;
-        while (temp != NULL)
-        {
-            count++;
-            temp = temp->next;
-        }
 
-        int midPos = (count / 2) + 1;
-        cout << "The middle node is : " << midPos << endl;
+        Node *fast = head;
+        Node *slow = head;
+
+        while (fast != NULL && fast->next != NULL)
+        {
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+        return slow->data;
     }
 };
 int main()
@@ -69,6 +69,6 @@ int main()
     LinkedList1.pushFront(5);
 
     LinkedList1.PrintInLinkedList();
-    LinkedList1.middleofLinkedList();
+    cout << LinkedList1.middleofLinkedList();
     return 0;
 }
