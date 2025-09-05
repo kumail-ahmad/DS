@@ -39,11 +39,11 @@ public:
         }
     }
 
-    // Function to create a loop
+    //  create a loop
     void createLoop(int position)
     {
         if (position == 0)
-            return; // No loop
+            return;
 
         Node *loopNode = head;
         int count = 1;
@@ -54,13 +54,14 @@ public:
         }
         if (loopNode != NULL)
         {
-            tail->next = loopNode; // last node points to 'position' node
+            tail->next = loopNode; // last node points to position node
         }
     }
-    bool detectCycle()
+    int detectCyclePos()
     {
         Node *fast = head;
         Node *slow = head;
+        bool isCycle = false;
 
         while (fast != NULL && fast->next != NULL)
         {
@@ -69,10 +70,21 @@ public:
 
             if (slow == fast)
             {
-                return true;
+                isCycle = true;
+                break;
             }
         }
-        return false;
+        if (!isCycle)
+        {
+            return -1;
+        }
+        slow = head;
+        while (slow != fast)
+        {
+            slow = slow->next;
+            fast = fast->next;
+        }
+        return slow->data;
     }
 };
 
@@ -87,6 +99,6 @@ int main()
 
     l.createLoop(2);
 
-    cout << l.detectCycle();
+    cout << "Loop found at index : " << l.detectCyclePos();
     return 0;
 }
