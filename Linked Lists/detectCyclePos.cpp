@@ -79,11 +79,14 @@ public:
             return -1;
         }
         slow = head;
+        Node *prev = NULL;
         while (slow != fast)
         {
             slow = slow->next;
+            prev = fast;
             fast = fast->next;
         }
+        prev->next = NULL; // remove cycle
         return slow->data;
     }
 };
@@ -99,6 +102,7 @@ int main()
 
     l.createLoop(2);
 
-    cout << "Loop found at index : " << l.detectCyclePos();
+    cout << "Loop found at index : \n" << l.detectCyclePos();
+    cout << "Loop found at index : " << l.detectCyclePos(); // no  loop
     return 0;
 }
