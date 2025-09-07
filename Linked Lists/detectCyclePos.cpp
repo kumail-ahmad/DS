@@ -89,7 +89,7 @@ public:
         prev->next = NULL; // remove cycle
         return slow->data;
     }
-};
+};  
 
 int main()
 {
