@@ -26,7 +26,7 @@ public:
     void pushFront(int val)
     {
         Node *newNode = new Node(val);
-        if (head == 0)
+        if (head == NULL)
         {
             head = tail = newNode;
             return;
