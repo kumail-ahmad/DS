@@ -72,6 +72,29 @@ public:
         temp->next = NULL;
         delete temp;
     };
+
+    void popBack()
+    {
+        if (head == NULL)
+        {
+            cout << "Linked List is Empty";
+            return;
+        }
+        else
+        {
+            Node *temp = tail;
+
+            tail = tail->prev;
+            if (tail != NULL)
+            {
+                tail->next = NULL;
+            }
+            temp->prev = NULL;
+
+            delete temp;
+        }
+    };
+
     void printLinkedList()
     {
         Node *temp = head;
@@ -100,6 +123,8 @@ int main()
     LinkedDb1.pushBack(20);
     LinkedDb1.printLinkedList();
     LinkedDb1.popFront();
+    LinkedDb1.printLinkedList();
+    LinkedDb1.popBack();
     LinkedDb1.printLinkedList();
 
     return 0;
