@@ -43,7 +43,20 @@ public:
         }
     };
 
-   
+    void pushBack(int val)
+    {
+        Node *newNode = new Node(val);
+        if (head == NULL)
+        {
+            head = tail = newNode;
+        }
+        else
+        {
+            tail->next = newNode;
+            newNode->prev = tail;
+            tail = newNode;
+        }
+    };
     void printLinkedList()
     {
         Node *temp = head;
@@ -64,7 +77,7 @@ int main()
     LinkedDb1.pushFront(2);
     LinkedDb1.pushFront(1);
 
-
+    LinkedDb1.pushBack(20);
     LinkedDb1.printLinkedList();
     return 0;
 }
