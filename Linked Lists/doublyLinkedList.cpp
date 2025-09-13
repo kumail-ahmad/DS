@@ -57,15 +57,35 @@ public:
             tail = newNode;
         }
     };
+    void popFront()
+    {
+        if (head == NULL)
+        {
+            cout << "List is empty";
+        }
+        Node *temp = head;
+        head = head->next;
+        if (head != NULL)
+        {
+            head->prev = NULL;
+        }
+        temp->next = NULL;
+        delete temp;
+    };
     void printLinkedList()
     {
         Node *temp = head;
+
         while (temp != NULL)
         {
             cout << temp->data << " <=> ";
             temp = temp->next;
         };
-        cout << "NULL" << endl;
+        if (head != NULL)
+        {
+
+            cout << "NULL" << endl;
+        }
     };
 };
 
@@ -79,5 +99,8 @@ int main()
 
     LinkedDb1.pushBack(20);
     LinkedDb1.printLinkedList();
+    LinkedDb1.popFront();
+    LinkedDb1.printLinkedList();
+
     return 0;
 }
