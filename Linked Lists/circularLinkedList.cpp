@@ -25,7 +25,21 @@ public:
 
         head = tail = NULL;
     }
-    
+    void insertAtHead(int val)
+    {
+        Node *newNode = new Node(val);
+        if (head == NULL || tail == NULL)
+        {
+            head = tail = newNode;
+            tail->next = head;
+        }
+        else
+        {
+            newNode->next = head;
+            head = newNode;
+            tail->next = newNode;
+        }
+    };
     void printLinkedList()
     {
         Node *temp = head;
@@ -46,7 +60,9 @@ int main()
 {
     CircularList circular1;
  
-   
+    circular1.insertAtHead(2);
+    circular1.insertAtHead(5);
+    circular1.insertAtHead(10);
     circular1.printLinkedList();
     return 0;
 }
