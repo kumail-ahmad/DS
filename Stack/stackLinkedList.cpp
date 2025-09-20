@@ -1,38 +1,16 @@
 #include <iostream>
-#include <list>
+#include <stack>
 using namespace std;
 
-class Stack
-{
-    list<int> ll;
 
-public:
-    void pushBack(int val)
-    {
-        ll.push_front(val);
-    }
-
-    void pop()
-    {
-        ll.pop_front();
-    }
-    int top()
-    {
-        return ll.front();
-    }
-    bool empty()
-    {
-        return ll.size() == 0;
-    }
-};
 
 int main()
 {
-    Stack st;
+    stack <int> st;
 
-    st.pushBack(3);
-    st.pushBack(2);
-    st.pushBack(1);
+    st.push(3);
+    st.push(2);
+    st.push(1);
 
     while (!st.empty())
     {
