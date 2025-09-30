@@ -81,7 +81,7 @@ public:
 
         return head == NULL;
     };
-    void printLinkedQueue()
+    void printQueue()
     {
         Node *temp = head;
         while (temp != NULL)
@@ -95,14 +95,14 @@ public:
 
 int main()
 {
-    Queue singlyLinkedQueue;
-    singlyLinkedQueue.push(3);
-    singlyLinkedQueue.push(2);
-    singlyLinkedQueue.push(1);
+    Queue q;
+    q.push(3);
+    q.push(2);
+    q.push(1);
 
-    singlyLinkedQueue.printLinkedQueue();
-    singlyLinkedQueue.pop();
-    cout << "Front : " << singlyLinkedQueue.front() << endl;
-    singlyLinkedQueue.printLinkedQueue();
+    q.printLinkedQueue();
+    q.pop();
+    cout << "Front : " << q.front() << endl;
+    q.printLinkedQueue();
     return 0;
 }
