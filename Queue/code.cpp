@@ -100,9 +100,9 @@ int main()
     q.push(2);
     q.push(1);
 
-    q.printLinkedQueue();
+    q.printQueue();
     q.pop();
     cout << "Front : " << q.front() << endl;
-    q.printLinkedQueue();
+    q.printQueue();
     return 0;
 }
