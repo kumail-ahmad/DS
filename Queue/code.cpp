@@ -44,6 +44,27 @@ public:
             tail = newNode;
         }
     };
+
+    void pop()
+    {
+        if (empty())
+        {
+            cout << " Queue is empty! \n";
+            return;
+        }
+        else
+        {
+            Node *temp = head;
+            head = head->next;
+            if (head = NULL)
+            {
+                tail = NULL;
+            }
+
+            delete temp;
+        }
+    };
+
     bool empty()
     {
 
@@ -57,7 +78,7 @@ public:
             cout << temp->data << " -> ";
             temp = temp->next;
         }
-        cout << "NULL";
+        cout << "NULL\n";
     };
 };
 
@@ -68,6 +89,8 @@ int main()
     singlyLinkedQueue.push(2);
     singlyLinkedQueue.push(1);
 
+    singlyLinkedQueue.printLinkedQueue();
+    singlyLinkedQueue.pop();
     singlyLinkedQueue.printLinkedQueue();
     return 0;
 }
