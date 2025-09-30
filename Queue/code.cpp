@@ -56,7 +56,7 @@ public:
         {
             Node *temp = head;
             head = head->next;
-            if (head = NULL)
+            if (head == NULL)
             {
                 tail = NULL;
             }
@@ -64,6 +64,17 @@ public:
             delete temp;
         }
     };
+
+    int front()
+    {
+        if (empty())
+        {
+            cout << "Queue is empty" << endl;
+            return -1;
+        }
+
+        return head->data;
+    }
 
     bool empty()
     {
@@ -91,6 +102,7 @@ int main()
 
     singlyLinkedQueue.printLinkedQueue();
     singlyLinkedQueue.pop();
+    cout << "Front : " << singlyLinkedQueue.front() << endl;
     singlyLinkedQueue.printLinkedQueue();
     return 0;
 }
