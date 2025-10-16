@@ -72,7 +72,6 @@ int main()
     s.pop();
     s.printStack(); // 2 1
 
-    return 0;
 
     return 0;
 }
