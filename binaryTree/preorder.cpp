@@ -16,7 +16,7 @@ public:
     }
 };
 static int idx = -1;
-Node *buildTree(vector<int> &preOrder)
+Node *buildTree(vector<int> preOrder)
 {
     idx++;
     if (idx >= preOrder.size() || preOrder[idx] == -1)
@@ -48,14 +48,25 @@ void inOrder(Node *root)
     inOrder(root->right);
 }
 
+void postOrder(Node *root)
+{
+    if (root == NULL)
+        return;
+    postOrder(root->left);
+    postOrder(root->right);
+    cout << root->data << " ";
+}
+
 int main()
 {
 
-    vector<int> preorder = {1, 2, -1, -1, 3, 4, -1, 5, -1, -1};
+    vector<int> preorder = {1, 2, -1, -1, 3, 4, -1, -1, 5, -1, -1};
     Node *root = buildTree(preorder);
     preOrder(root);
     cout << endl;
     inOrder(root);
+    cout << endl;
+    postOrder(root);
     // cout << root->data << endl;
     return 0;
 }
