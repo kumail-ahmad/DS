@@ -25,30 +25,21 @@ Node *buildTree(vector<int> preOrder)
     return root;
 }
 
-int heightOfTree(Node *root)
+int ans = 0;
+int height(Node *root)
 {
-    if (root == NULL)
-    {
+    if (!root)
         return 0;
-    }
-    int leftHt = heightOfTree(root->left);
-    int rightHt = heightOfTree(root->right);
+    int leftHt = height(root->left);
+    int rightHt = height(root->right);
+    ans = max(ans, leftHt + rightHt);
     return max(leftHt, rightHt) + 1;
 }
-//On^2
+
 int diameter(Node *root)
 {
-    if (root == NULL)
-    {
-        return 0;
-    }
-
-    int leftDia = diameter(root->left);
-    int rightDia = diameter(root->right);
-
-    int currDia = heightOfTree(root->left) + heightOfTree(root->right);
-
-    return max(leftDia, max(rightDia, currDia));
+    height(root);
+    return ans;
 }
 
 int main()
